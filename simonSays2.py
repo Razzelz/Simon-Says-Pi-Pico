@@ -86,11 +86,11 @@ def randomLED(): #Generates random LED pattern
         leds[randomIntList[i]].value(0)
 
 #This code doesn't work, and I can't fix it
-#def waitToStart(): #Waits for a button push before starting the game
-#    while True:
-#        for i in range(len(buttons)):
-#            if buttons[i].value == 0:
-#                return
+def waitToStart(): #Waits for a button push before starting the game
+    while True:
+        for i in range(len(buttons)):
+            if buttons[i].value() == 0:
+                return
     
 def loop():
     randomLED()
